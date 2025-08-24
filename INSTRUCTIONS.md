@@ -64,6 +64,19 @@ Envie uma requisição `POST` para `/auth/register` com seu nome, email e senha.
 }
 ```
 
+**Importante:** Requisitos da Senha
+A senha enviada deve obrigatoriamente atender aos seguintes critérios:
+
+Mínimo de 8 caracteres de comprimento.
+
+Conter pelo menos uma letra minúscula (a-z).
+
+Conter pelo menos uma letra maiúscula (A-Z).
+
+Conter pelo menos um número (0-9).
+
+Conter pelo menos um caractere especial (ex: !, @, #, $, %).
+
 ### 2. Fazer Login
 
 Após o registro, envie uma requisição `POST` para `/auth/login` com o email e a senha cadastrados.

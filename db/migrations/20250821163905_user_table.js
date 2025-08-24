@@ -8,7 +8,7 @@ exports.up = function(knex) {
             table.increments('id').primary();
             table.string('nome').notNullable();
             table.string('email').notNullable().unique();
-            table.string('password').notNullable();
+            table.string('senha').notNullable();
         })
 };
 
@@ -18,5 +18,5 @@ exports.up = function(knex) {
  */
 exports.down = function(knex) {
     return knex.schema
-        .dropTableIfExists('users');
+        .dropTableIfExists('usuarios');
 };

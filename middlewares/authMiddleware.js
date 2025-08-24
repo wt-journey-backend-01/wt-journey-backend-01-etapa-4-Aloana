@@ -13,7 +13,6 @@ function authMiddleware(req, res, next) {
   }
 
   const [scheme, token] = parts;
-
   if (!/^Bearer$/i.test(scheme)) {
     return res.status(401).json({ error: 'Token mal formatado.' });
   }
@@ -23,7 +22,10 @@ function authMiddleware(req, res, next) {
       return res.status(401).json({ error: 'Token inválido ou expirado.' });
     }
 
-    req.userId = decoded.id;
+    req.user = {
+      id: decoded.id,
+      email: decoded.email
+    };
     
     return next();
   });
