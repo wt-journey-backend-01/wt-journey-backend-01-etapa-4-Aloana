@@ -24,12 +24,14 @@ Neste arquivo você encontrará a estrutura de pastas do projeto, as instruçõe
 ├── routes/
 │ ├── agentesRoutes.js
 │ ├── casosRoutes.js
-│ └── authRoutes.js        <-- NOVO
+│ ├── authRoutes.js        <-- NOVO
+│ └── usuariosRoutes.js   <-- NOVO
 │
 ├── controllers/
 │ ├── agentesController.js
 │ ├── casosController.js
-│ └── authController.js      <-- NOVO
+│ ├── authController.js      <-- NOVO
+│ └── usuariosController.js   <-- NOVO
 │
 ├── repositories/
 │ ├── agentesRepository.js

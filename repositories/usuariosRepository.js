@@ -4,7 +4,7 @@ class UsuariosRepository {
   async criar(dadosUsuario) {
     const [usuario] = await knex('usuarios')
       .insert(dadosUsuario)
-      .returning(['id', 'email']);
+      .returning(['id', 'nome', 'email']);
     return usuario;
   }
 

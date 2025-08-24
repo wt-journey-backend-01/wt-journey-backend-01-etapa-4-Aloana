@@ -3,16 +3,17 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const { errorHandler } = require('./utils/errorHandler');
-
 const agentesRoutes = require('./routes/agentesRoutes');
 const casosRoutes = require('./routes/casosRoutes');
 const authRoutes = require('./routes/authRoutes');
+const usuariosRoutes = require('./routes/usuariosRoutes');
 
 const { swaggerUi, swaggerSpec } = require('./docs/swagger');
 
 app.use(express.json());
 
 app.use('/auth', authRoutes);
+app.use('/usuarios', usuariosRoutes);
 app.use('/agentes', agentesRoutes);
 app.use('/casos', casosRoutes);
 
